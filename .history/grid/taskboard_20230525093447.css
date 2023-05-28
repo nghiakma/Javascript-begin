@@ -1,0 +1,29 @@
+@font-face {
+	font-family: WorkSans;
+	src: url("https://s3.amazonaws.com/codecademy-content/courses/learn-css-grid/project-ii/Resources/Work_Sans/WorkSans-Regular.ttf");
+}
+@font-face {
+	font-family: Poppins;
+	src: url("https://s3.amazonaws.com/codecademy-content/courses/learn-css-grid/project-ii/Resources/Poppins/Poppins-Regular.ttf");
+}
+
+html {
+height: 100%;
+}
+
+body {
+height: 100%;
+margin: 0;
+background-image: linear-gradient(359deg, #3023ae, #eb7f7b);
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.navbar {
+display: grid;
+}
+
+.navbar h1 {
+
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="timer.css">
+    <style>
+        span {
+            cursor: pointer;
+            color: white;
+            background: black;
+        }
+    </style>
+    <script type="text/javascript">
+        // John Livingston (wavwizard_wavmaster@yahoo.com) | http://wavsyntax.bravehost.com
+
+        var msec = 0
+        var sec = 0
+        var min = 0
+        function start() {
+            document.forms[0].display.value = min + ":" + sec + ":" + msec
+            go = setTimeout("start()", 1)
+            msec++
+            if (msec == 100) {
+                msec = 0
+                sec++
+            }
+            if (sec == 60) {
+                sec = 0
+                min++
+            }
+        }
+
+        function stop() {
+            clearTimeout(go)
+        }
+        function reset() {
+            window.location.reload()
+        }
+        function over1(test) { document.getElementById('over1').style.background = test }
+        function out1(test) { document.getElementById('over1').style.background = test }
+        function over2(test) { document.getElementById('over2').style.background = test }
+        function out2(test) { document.getElementById('over2').style.background = test }
+        function over3(test) { document.getElementById('over3').style.background = test }
+        function out3(test) { document.getElementById('over3').style.background = test }
+    </script>
+</head>
+<span id="over1" onmouseover="over1('red')" onmouseout="out1('black')" onclick="start()">
+    Start</span>
+<span id="over2" onmouseover="over2('red')" onmouseout="out2('black')" onclick="stop()">
+    Stop</span>
+<span id="over3" onmouseover="over3('red')" onmouseout="out3('black')" onclick="reset()">
+    Reset</span>
+<form>
+    <input type="text" name="display" size="22" value="00:00:00">
+</form>
+<!--
+    	This script downloaded from www.JavaScriptBank.com
+    	Come to view and download over 2000+ free javascript at www.JavaScriptBank.com
+	-->
+
+<body>
+
+</body>
+
+</html>

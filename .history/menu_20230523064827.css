@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "ubuntu";
+}
+img{
+    width: 100%;
+}
+header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: #0b2239;
+}
+header .header-left{
+    display: flex;
+    align-items: center;
+}
+header .header-left .logo{
+    width: 140px;
+}
+header .header-left nav{
+    margin-left: 50px;
+}
+header .header-left nav ul{
+    display: flex;
+}
+nav ul li a{
+    display:  block;
+    color: #cfd9e0;
+    font-size: 18px;
+    
+    transition: 0.2s;
+}

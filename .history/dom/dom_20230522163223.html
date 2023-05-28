@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p>Finding HTML Elements by Query Selector</p>
+    <p class="intro">Hello World!.</p>
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+    <!-- <form action="" id="frm1">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <img id="myImage" src="smiley.gif">
+    <script>
+        // document.getElementById("demo").innerHTML = "hello world";
+        // const x = document.getElementsByClassName("intro");
+        // const element = document.getElementsByTagName("p");
+        // document.getElementById("demo").innerHTML = 'The text in first paragraph' + element[0].innerHTML;
+
+        /*Tim phan tu html css selector tim tat ca cac phan tu*/
+        // const x = document.querySelectorAll("p.intro");
+        // document.getElementById("demo").innerHTML =
+        //     'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+
+        /*Tim phan tu form*/
+        // const x = document.forms["frm1"];
+        // let text = "";
+        // for (let i = 0; i < x.length; i++) {
+        //     text += x.elements[i].value + "<br>";
+        // }
+        // document.getElementById("demo").innerHTML = text;
+
+        //thay đổi giá trị của thuộc tính
+        document.getElementById("myImage").src = "landscape.jpg";
+
+        //dynamic html content: tạo ra một dynamic html content
+        document.getElementById("demo").innerHTML = "Date : " + Date();
+
+        //DOM forms: Js form validation
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+    function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+    alert("Name must be filled out");
+    return false;
+    }
+    }
+</body>
+
+</html>
